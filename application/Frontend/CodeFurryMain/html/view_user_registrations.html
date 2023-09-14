@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Link custom CSS -->
+    <link rel="stylesheet" href="css/styleForms.css">
+    <style>
+        /* CSS for the table */
+        body {
+            background: #1c1e21 url(https://images.pexels.com/photos/7676848/pexels-photo-7676848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            background-blend-mode: overlay;
+            animation: smoky 15s infinite alternate-reverse; /* Adding smoky animation */
+        }
+
+        @keyframes smoky {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }h
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            border: 4px double #999; /* Double-lined border */
+        }
+
+        th, td {
+            border: 2px double #999; /* Double-lined border for table cells */
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Additional styling for the table headers */
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* CSS for the switch button */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {display:none;}
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #00FF00; /* Green when activated */
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #00FF00; /* Green shadow when activated */
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        input:not(:checked) + .slider {
+            background-color: #FF0000; /* Red when deactivated */
+        }
+
+        input:not(:checked) + .slider:before {
+            background-color: white; /* White when deactivated */
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: white;">User Information</h1>
+    </header>
+
+    <div class="content">
+        <!-- Display user information in a table goes here -->
+        <table >
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Date of Joining</th>
+                    <th>Date of Birth</th>
+                    <th>Activation Status</th>
+                </tr>
+            </thead>
+            <tbody style="color: white;">
+                <tr>
+                    <td>001</td>
+                    <td>Bhavya Joshi</td>
+                    <td>********</td>
+                    <td>2023-01-15</td>
+                    <td>1990-05-20</td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Daksh Roy</td>
+                    <td>********</td>
+                    <td>2023-02-10</td>
+                    <td>1985-09-12</td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>Jiya Jain</td>
+                    <td>********</td>
+                    <td>2023-03-25</td>
+                    <td>1992-11-05</td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>Suday Kohli</td>
+                    <td>********</td>
+                    <td>2023-04-18</td>
+                    <td>1988-07-30</td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Jass Kaur</td>
+                    <td>********</td>
+                    <td>2023-05-12</td>
+                    <td>1995-03-15</td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>006</td>
+                    <td>Maink Singla</td>
+                    <td>********</td>
+                    <td>2023-06-05</td>
+                    <td>1987-09-22</td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>007</td>
+                    <td>Ishan Batra</td>
+                    <td>********</td>
+                    <td>2023-07-19</td>
+                    <td>1993-12-10</td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <footer style="color: rgb(91, 84, 84);">
+        <p>&copy; Elegance to Excellence</p>
+    </footer>
+</body>
+</html>

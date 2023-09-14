@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-attachment: scroll;
+            background: #1c1e21 url(https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            background-blend-mode: overlay;
+        }
+
+        .container {
+            margin: 50px auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .btn {
+            display: block; /* Change from inline-block to block */
+            width: 100%; /* Make buttons full width of the container */
+            padding: 10px 0; /* Add padding to the top and bottom */
+            text-decoration: none;
+            background-color: black;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px; /* Add margin between buttons */
+        }
+
+        .btn:hover {
+            background-color: #005663;
+        }
+
+        p {
+            color: #333;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>  Welcome!  </h1>
+  
+    <a href="userProfile.html" class="btn">View Profile</a>
+    <a href="passwordChange.html" class="btn">Change Password</a>
+    <a href="sendRequestPage.html" class="btn">Send Plan Request</a>
+    <a href="viewQuotationpage.html" class="btn">View Quotations</a>
+    <a href="user-login.html" class="btn">Log Out</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* CSS for the table */
+        body {
+            background: #1c1e21 url(https://images.pexels.com/photos/7676848/pexels-photo-7676848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            background-blend-mode: overlay;
+            animation: smoky 15s infinite alternate-reverse; /* Adding smoky animation */
+        }
+
+        @keyframes smoky {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            border: 4px double #999; /* Double-lined border */
+        }
+
+        th, td {
+            border: 2px solid #999; /* Single-lined border for table cells */
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Additional styling for the table headers */
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: white;">View Vendor</h1>
+    </header>
+
+    <div class="content">
+        <!-- Display vendor details in a table goes here -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Event Packages</th>
+                </tr>
+            </thead>
+            <tbody style="color: white;">
+                <tr>
+                    <td>Rajesh Kumar</td>
+                    <td>001</td>
+                    <td>rajesh@example.com</td>
+                    <td>123-456-7890</td>
+                    <td>Basic Package</td>
+                </tr>
+                <tr>
+                    <td>Priya Patel</td>
+                    <td>002</td>
+                    <td>priya@example.com</td>
+                    <td>987-654-3210</td>
+                    <td>Premium Package</td>
+                </tr>
+                <tr>
+                    <td>Ankit Sharma</td>
+                    <td>003</td>
+                    <td>ankit@example.com</td>
+                    <td>555-555-5555</td>
+                    <td>Classic Package</td>
+                </tr>
+                <tr>
+                    <td>Sneha Verma</td>
+                    <td>004</td>
+                    <td>sneha@example.com</td>
+                    <td>111-222-3333</td>
+                    <td>Premium Package</td>
+                </tr>
+                <tr>
+                    <td>Amit Khanna</td>
+                    <td>005</td>
+                    <td>amit@example.com</td>
+                    <td>333-333-3333</td>
+                    <td>Basic Package</td>
+                </tr>
+                <tr>
+                    <td>Priyanka Singh</td>
+                    <td>006</td>
+                    <td>priyanka@example.com</td>
+                    <td>777-888-9999</td>
+                    <td>Premium Package</td>
+                </tr>
+                <tr>
+                    <td>Vikram Mehta</td>
+                    <td>007</td>
+                    <td>vikram@example.com</td>
+                    <td>444-555-6666</td>
+                    <td>Classic Package</td>
+                </tr>
+                <tr>
+                    <td>Swati Sharma</td>
+                    <td>008</td>
+                    <td>swati@example.com</td>
+                    <td>222-222-2222</td>
+                    <td>Classic Package</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer style="color: rgb(91, 84, 84);">
+        <p>&copy; Your Event Our Signature</p>
+    </footer>
+</body>
+</html>

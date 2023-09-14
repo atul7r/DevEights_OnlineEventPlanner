@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profiles</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+           
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Style the table and buttons */
+        table {
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .edit-button {
+            background-color: plum;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .edit-button:hover {
+            background-color: plum;
+        }
+
+        .save-button {
+            background-color: #008CBA;
+        }
+
+        .save-button:hover {
+            background-color: #0077A3;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Address</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- User 1 -->
+            <tr>
+                <td><span id="username1">Bhavya Joshi</span></td>
+                <td><input type="email" id="email1" value="bhavya@example.com" readonly></td>
+                <td><input type="tel" id="mobile1" value="9876543210" readonly></td>
+                <td><textarea id="address1" readonly>45 ganga housing society ,Pune, India</textarea></td>
+                <td><button type="button" class="edit-button" data-user-id="1">Edit</button></td>
+            </tr>
+            <!-- User 2 -->
+            <tr>
+                <td><span id="username2">Daksh Roy</span></td>
+                <td><input type="email" id="email2" value="daksh@example.com" readonly></td>
+                <td><input type="tel" id="mobile2" value="9876543211" readonly></td>
+                <td><textarea id="address2" readonly>456 viman nagar, Pune, India</textarea></td>
+                <td><button type="button" class="edit-button" data-user-id="2">Edit</button></td>
+            </tr>
+            <!-- User 3 -->
+            <tr>
+                <td><span id="username3">Jiya Jain</span></td>
+                <td><input type="email" id="email3" value="jiya@example.com" readonly></td>
+                <td><input type="tel" id="mobile3" value="9876543212" readonly></td>
+                <td><textarea id="address3" readonly>789,Srinath Plaza, Mumbai, India</textarea></td>
+                <td><button type="button" class="edit-button" data-user-id="3">Edit</button></td>
+            </tr>
+            <!-- User 4 -->
+            <tr>
+                <td><span id="username4">Suday Kohli</span></td>
+                <td><input type="email" id="email4" value="suday@example.com" readonly></td>
+                <td><input type="tel" id="mobile4" value="9876543213" readonly></td>
+                <td><textarea id="address4" readonly>321 Koregaon Park ,Pune , India</textarea></td>
+                <td><button type="button" class="edit-button" data-user-id="4">Edit</button></td>
+            </tr>
+            <!-- User 5 -->
+            <tr>
+                <td><span id="username5">Jass Kaur</span></td>
+                <td><input type="email" id="email5" value="jass@example.com" readonly></td>
+                <td><input type="tel" id="mobile5" value="9876543214" readonly></td>
+                <td><textarea id="address5" readonly>654,sharma society Thane, Mumbai, India</textarea></td>
+                <td><button type="button" class="edit-button" data-user-id="5">Edit</button></td>
+            </tr>
+            <!-- User 6 -->
+            <tr>
+                <td><span id="username6">Maink Singla</span></td>
+                <td><input type="email" id="email6" value="maink@example.com" readonly></td>
+                <td><input type="tel" id="mobile6" value="9876543215" readonly></td>
+                <td><textarea id="address6" readonly>987 Bandra Street, Mumbai, India</textarea></td>
+                <td><button type="button" class="edit-button" data-user-id="6">Edit</button></td>
+            </tr>
+            <!-- User 7 -->
+            <tr>
+                <td><span id="username7">Ishan Batra</span></td>
+                <td><input type="email" id="email7" value="ishan@example.com" readonly></td>
+                <td><input type="tel" id="mobile7" value="9876543216" readonly></td>
+                <td><textarea id="address7" readonly>234 Maple Avenue, Delhi, India</textarea></td>
+                <td><button type="button" class="edit-button" data-user-id="7">Edit</button></td>
+            </tr>
+            <!-- Repeat the above structure for more users (8 and beyond) -->
+        </tbody>
+    </table>
+
+    <script>
+        // JavaScript code to handle edit and save functionality
+        const editButtons = document.querySelectorAll('.edit-button');
+
+        editButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const userId = button.getAttribute('data-user-id');
+                const emailInput = document.getElementById(`email${userId}`);
+                const mobileInput = document.getElementById(`mobile${userId}`);
+                const addressTextarea = document.getElementById(`address${userId}`);
+                const saveButton = document.createElement('button');
+                saveButton.innerText = 'Save';
+                saveButton.type = 'button';
+                saveButton.classList.add('save-button');
+                button.style.display = 'none';
+                button.parentNode.appendChild(saveButton);
+
+                emailInput.removeAttribute('readonly');
+                mobileInput.removeAttribute('readonly');
+                addressTextarea.removeAttribute('readonly');
+
+                saveButton.addEventListener('click', () => {
+                    emailInput.setAttribute('readonly', 'readonly');
+                    mobileInput.setAttribute('readonly', 'readonly');
+                    addressTextarea.setAttribute('readonly', 'readonly');
+                    saveButton.style.display = 'none';
+                    button.style.display = 'inline-block';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

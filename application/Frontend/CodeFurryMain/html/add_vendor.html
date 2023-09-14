@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* CSS for the body element */
+        body {
+            background-color: #16151c;
+            /* Grey background color for the margin area */
+            margin: 0;
+            /* Remove default body margin */
+        }
+
+        /* CSS for the form container */
+        .form-container {
+            border: 2px solid #999;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            color: #fff;
+            /* Add text color */
+            background-attachment: scroll;
+            background: #1c1e21 url(https://images.pexels.com/photos/7676848/pexels-photo-7676848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            background-blend-mode: overlay;
+            background-position: center center;
+            background-repeat: none;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+            min-height: 100%;
+        }
+
+        /* CSS for the form elements */
+        .form-container label,
+        .form-container input,
+        .form-container button {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Additional styling for the button */
+        .form-container button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        h1 {
+            color: white;
+            /* Set the text color to white */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Add Vendor</h1>
+    </header>
+
+    <!-- Form container with outline box -->
+    <div class="form-container">
+        <form id="vendorForm">
+            <label for="vendorName">Vendor Name:</label>
+            <input type="text" id="vendorName" name="vendorName" required><br><br>
+
+            <label for="vendorEmail">Email:</label>
+            <input type="email" id="vendorEmail" name="vendorEmail" required><br><br>
+
+            <label for="vendorPhoneNumber">Phone Number:</label>
+            <input type="tel" id="vendorPhoneNumber" name="vendorPhoneNumber" required><br><br>
+
+            <label for="package">Package Name:</label>
+            <input type="text" id="package" name="package" required><br><br>
+
+            <button type="button" id="addVendorButton">Add Vendor</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>
+            &copy; 2023 All Rights Reserved By
+            <a href="index.html">Event Crafters</a>
+          </p>
+    </footer>
+
+    <script>
+        document.getElementById("addVendorButton").addEventListener("click", function () {
+            // Generate a random ID between 1 and 9
+            var vendorId = Math.floor(Math.random() * 9) + 1;
+
+            // Retrieve values from the form
+            var vendorName = document.getElementById("vendorName").value;
+            var vendorEmail = document.getElementById("vendorEmail").value;
+            var vendorPhoneNumber = document.getElementById("vendorPhoneNumber").value;
+            var package = document.getElementById("package").value;
+
+            // Display the generated ID and vendor details
+            if(vendorName != "" && vendorEmail != "" && vendorPhoneNumber != "" && package != "")
+            {
+            alert("Vendor ID: " + vendorId +
+                "\nVendor Name: " + vendorName +
+                "\nEmail: " + vendorEmail +
+                "\nPhone Number: " + vendorPhoneNumber +
+                "\nPackage Name: " + package); }
+                 else
+                 alert("Please fill all the details")
+        })
+    </script>
+</body>
+
+</html>

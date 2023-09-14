@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendors List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin-top: 100px;
+            margin-bottom: 0;
+            padding: 0;
+            background-attachment: scroll;
+            background: #1c1e21 url(https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            background-blend-mode: overlay;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            text-transform: uppercase;
+            padding-top: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            /* Stack buttons below each other */
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        .vendor-info {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            /* Stack buttons below each other */
+            gap: 10px;
+            margin-top: 10px;
+            /* Add some space between buttons and info */
+        }
+
+        .dropdown {
+            width: 150px;
+        }
+
+        .vendor-button {
+            background-color: plum;
+            color: brown;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .vendor-button:hover {
+            background-color: #CC0000;
+        }
+        .back-button {
+            display: inline-block;
+            background-color: plum;
+            color: brown;
+            margin-right: 5px;
+            padding: 10px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            /* Remove underlines from the link */
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .back-button:hover {
+            background-color: #B36C7A;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Vendors List</h2>
+        <ul>
+            <li>
+                <div class="vendor-info">
+                    Vendor: Rajesh Kumar
+                </div>
+                <div class="action-buttons">
+                    <a href="Quotations/Rajeshquotation.html" type="button" class="vendor-button view-button"
+                        data-vendor="Rajesh Kumar">View Quotation</a>
+                    <select class="dropdown">
+                        <option value="accept">Accept</option>
+                        <option value="reject">Reject</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div class="vendor-info">
+                    Vendor: Priya Patel
+                </div>
+                <div class="action-buttons">
+                    <a href="/Quotations/PriyaQuotation.html" type="button" class="vendor-button view-button"
+                        data-vendor="Priya Patel">View Quotation</a>
+                    <select class="dropdown">
+                        <option value="accept">Accept</option>
+                        <option value="reject">Reject</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div class="vendor-info">
+                    Vendor: Ankit Sharma
+                </div>
+                <div class="action-buttons">
+                    <a href="/Quotations/AnkitQuotation.html" type="button" class="vendor-button view-button"
+                        data-vendor="Ankit Sharma">View Quotation</a>
+                    <select class="dropdown">
+                        <option value="accept">Accept</option>
+                        <option value="reject">Reject</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div class="vendor-info">
+                    Vendor: Sneha Verma
+                </div>
+                <div class="action-buttons">
+                    <a href="/Quotations/SnehaQuotation.html" type="button" class="vendor-button view-button"
+                        data-vendor="Sneha Verma">View Quotation</a>
+                    <select class="dropdown">
+                        <option value="accept">Accept</option>
+                        <option value="reject">Reject</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div class="vendor-info">
+                    Vendor: Amit Khanna
+                </div>
+                <div class="action-buttons">
+                    <a href="/Quotations/AmitKhannaQuotation.html" type="button" class="vendor-button view-button"
+                        data-vendor="Amit Khanna">View Quotation</a>
+                    <select class="dropdown">
+                        <option value="accept">Accept</option>
+                        <option value="reject">Reject</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div class="vendor-info">
+                    Vendor: Priyanka Singh
+                </div>
+                <div class="action-buttons">
+                    <a href="/Quotations/PriyankaSinghQuotation.html" type="button" class="vendor-button view-button"
+                        data-vendor="Priyanka Singh">View Quotation</a>
+                    <select class="dropdown">
+                        <option value="accept">Accept</option>
+                        <option value="reject">Reject</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div class="vendor-info">
+                    Vendor: Vikram Mehta
+                </div>
+                <div class="action-buttons">
+                    <a href="/Quotations/VikramMehtaQuotation.html" type="button" class="vendor-button view-button"
+                        data-vendor="Vikram Mehta">View Quotation</a>
+                    <select class="dropdown">
+                        <option value="accept">Accept</option>
+                        <option value="reject">Reject</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div class="vendor-info">
+                    Vendor: Swati Sharma
+                </div>
+                <div class="action-buttons">
+                    <a href="/Quotations/SwatiSharmaQuotation.html" type="button" class="vendor-button view-button"
+                        data-vendor="Swati Sharma">View Quotation</a>
+                    <select class="dropdown">
+                        <option value="accept">Accept</option>
+                        <option value="reject">Reject</option>
+                    </select>
+                </div>
+            </li>
+
+        </ul>
+
+        <div class="back-button-container">
+            <a href="UserHomePage.html" class="back-button">Back </a>
+        </div>
+    </div>
+</body>
+
+</html>
